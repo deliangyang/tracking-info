@@ -1,0 +1,28 @@
+<div class="delivery-info">
+  <SearchBar 
+    [placeholder]="'请输入订单号'"
+    [(ngModel)]="value" 
+    [setFocus]="true"
+    (onSubmit)="submit(value)"></SearchBar>
+
+  <WhiteSpace [size]="'md'"></WhiteSpace>
+  <WingBlank [size]="'md'">
+    <Steps [size]="'small'" *ngIf="deliveryInfo; else noneData" [current]="1">
+      <Step *ngFor="let item of deliveryInfo.internationalTrackingInfo" 
+        [title]="item.time | amDateFormat: 'YYYY-MM-DD HH:mm'"
+        [description]="item.context"></Step>
+
+      <Step *ngFor="let item of deliveryInfo.domesticTrackingInfo" 
+        [title]="item.time | amDateFormat: 'YYYY-MM-DD HH:mm'"
+        [description]="item.context"></Step>
+
+      <Step *ngFor="let item of deliveryInfo.clearanceTrackingInfo" 
+        [title]="item.time | amDateFormat: 'YYYY-MM-DD HH:mm'"
+        [description]="item.context"></Step>
+    </Steps>
+  </WingBlank>
+
+  <ng-template #noneData>
+    <div class="none-data">暂无数据</div>
+  </ng-template>
+</div>
