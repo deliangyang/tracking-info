@@ -15,7 +15,7 @@ export class DeliveryComponent implements OnInit {
 
   deliveryInfo: DeliveryInfo;
 
-  constructor(private deliveryService: DeliveryService, private _toast: Toast) {  }
+  constructor(private deliveryService: DeliveryService) {  }
 
   ngOnInit() {
   }

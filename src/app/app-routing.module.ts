@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, isDevMode } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { UploadComponent } from './upload/upload.component';
 import { DeliveryComponent } from './delivery/delivery.component';
@@ -21,7 +21,7 @@ const routes: Routes = [
   imports: [
     RouterModule.forRoot(
       routes, 
-      { enableTracing: true, useHash:  true }
+      { enableTracing: false }
     )
   ],
   exports: [RouterModule]
