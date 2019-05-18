@@ -12,7 +12,7 @@ const routes: Routes = [
     component: UploadComponent,
   },
   {
-    path: 'delivery',
+    path: 'tracking-info',
     component: DeliveryComponent,
   }
 ];
@@ -21,7 +21,7 @@ const routes: Routes = [
   imports: [
     RouterModule.forRoot(
       routes, 
-      { enableTracing: true }
+      { enableTracing: true, useHash:  true }
     )
   ],
   exports: [RouterModule]
