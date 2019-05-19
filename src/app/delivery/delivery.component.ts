@@ -7,7 +7,7 @@ import { Toast } from 'ng-zorro-antd-mobile';
   selector: 'app-delivery',
   templateUrl: './delivery.component.html',
   styleUrls: ['./delivery.component.less'],
-  providers: [Toast]
+  providers: [Toast],
 })
 export class DeliveryComponent implements OnInit {
 

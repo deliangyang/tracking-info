@@ -1,7 +1,6 @@
-import { NgModule, isDevMode } from '@angular/core';
+import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { UploadComponent } from './upload/upload.component';
-import { DeliveryComponent } from './delivery/delivery.component';
 
 const routes: Routes = [
   {
@@ -13,7 +12,7 @@ const routes: Routes = [
   },
   {
     path: 'tracking-info',
-    component: DeliveryComponent,
+    loadChildren: './tracking-info/tracking-info.module#TrackingInfoModule',
   }
 ];
 
