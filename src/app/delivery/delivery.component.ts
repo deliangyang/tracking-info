@@ -11,7 +11,7 @@ import { Toast } from 'ng-zorro-antd-mobile';
 })
 export class DeliveryComponent implements OnInit {
 
-  value: string = '';
+  value: string;
 
   deliveryInfo: DeliveryInfo;
 
@@ -24,7 +24,7 @@ export class DeliveryComponent implements OnInit {
     this.deliveryService.ping(value)
       .subscribe((info: Array<DeliveryInfo>) => {
         if (info.length <= 0) {
-          Toast.show("未查询到结果", 1500);
+          Toast.show('未查询到结果', 1500);
         }
         this.deliveryInfo = info.pop();
       });

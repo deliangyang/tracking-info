@@ -13,7 +13,7 @@ import { NgZorroAntdMobileModule } from 'ng-zorro-antd-mobile';
     TrackingInfoRoutingModule,
     MomentModule,
     FormsModule,
-    NgZorroAntdMobileModule
+    NgZorroAntdMobileModule,
   ],
   declarations: [DeliveryComponent],
 })

@@ -7,6 +7,7 @@ import { IdcardComponent } from './idcard/idcard.component';
 import { UploadComponent } from './upload/upload.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
+import { NgZorroAntdMobileModule } from 'ng-zorro-antd-mobile';
 
 
 @NgModule({
@@ -20,6 +21,10 @@ import { HttpClientModule } from '@angular/common/http';
     AppRoutingModule,
     BrowserAnimationsModule,
     HttpClientModule,
+    NgZorroAntdMobileModule,
+  ],
+  exports: [
+    NgZorroAntdMobileModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

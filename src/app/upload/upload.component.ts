@@ -7,21 +7,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UploadComponent implements OnInit {
 
-  title: string
+  title: string;
 
-  icon: string
+  icon: string;
 
-  rightContent: string = 'hello'
+  rightContent = 'hello';
 
-  constructor() { 
-    this.title = "hell world";
+  constructor() {
+    this.title = 'hell world';
   }
 
   ngOnInit() {
-    
+
   }
 
   onLeftClick() {
-    this.rightContent = 'world'
+    this.rightContent = 'world';
   }
 }

@@ -6,9 +6,9 @@ import { environment } from 'src/environments/environment';
 const httpOptions = {
   headers: new HttpHeaders({
     'Content-Type':  'application/json',
-    'Authorization': 'my-auth-token',
+    Authorization: 'my-auth-token',
   })
-}
+};
 
 @Injectable({
   providedIn: 'root'
@@ -19,11 +19,9 @@ export class DeliveryService {
 
   ping(billNo: string) {
     return this.http.get<[DeliveryInfo]>(
-      environment.host + "/api/express/logistics",
+      environment.host + '/api/express/logistics',
       {
-        params: {
-          billNo: billNo,
-        }
+        params: { billNo }
       });
   }
 }

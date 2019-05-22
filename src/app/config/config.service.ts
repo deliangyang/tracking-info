@@ -9,6 +9,6 @@ export class ConfigService {
   constructor(private http: HttpClient) { }
 
   getConfig() {
-    return this.http.get('https://party.haochang.tv');
+    return this.http.get('');
   }
 }
